@@ -80,7 +80,7 @@ export default function ShowCard({ show }) {
 
         {isFilled(show.ticketUrl) ? (
           <a className="btn" href={show.ticketUrl} target="_blank" rel="noopener noreferrer">
-            Tickets <span aria-hidden="true">↗</span>
+            Tickets <span aria-hidden="true">{'\u2197\uFE0E'}</span>
             <span className="sr-only"> (opens in a new tab)</span>
           </a>
         ) : DRAFT_MODE && show.ticketUrl ? (

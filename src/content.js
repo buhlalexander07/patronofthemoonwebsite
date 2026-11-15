@@ -21,7 +21,7 @@ export const site = {
   url: 'https://patronofthemoon.com',
   genres: ['Indie Rock, Alternative Rock, Dream Pop'],
   // Band logo. Leave '' to use the typographic wordmark. e.g. 'images/logo/logo.png'
-  logo: 'images/logo/logo.png',
+  logo: '',
   email: 'patronofthemoonband@gmail.com', // [ADD CONTACT EMAIL]
 }
 
