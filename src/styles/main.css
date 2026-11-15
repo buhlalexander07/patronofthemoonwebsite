@@ -444,7 +444,50 @@
     position: absolute; left: 0; bottom: 0; z-index: 3; margin: 0;
     padding: 0.4rem 0.6rem; background: rgba(8, 9, 13, 0.6);
   }
-  
+
+  /* clickable tiles */
+  .pgrid__open {
+    display: block; width: 100%; height: 100%; padding: 0;
+    border: 0; background: none; cursor: zoom-in;
+  }
+  .pgrid__open .photo { transition: opacity 0.3s ease; }
+  .pgrid__open:hover .photo { opacity: 0.85; }
+
+  /* photo viewer */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 300;
+    display: flex; align-items: center; justify-content: center;
+    padding: 3.5rem 1rem;
+    background: rgba(8, 9, 13, 0.95);
+  }
+  .lightbox__figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+  .lightbox__frame { position: relative; isolation: isolate; line-height: 0; }
+  .lightbox__img {
+    display: block; width: auto; height: auto;
+    max-width: 88vw; max-height: 80vh; max-height: 80svh;
+  }
+  .lightbox__caption { margin: 0; font-family: var(--font-type); font-size: 0.75rem; color: var(--silver); }
+  .lightbox__nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 48px; height: 48px; display: grid; place-items: center;
+    border: 1px solid var(--line-strong); background: rgba(8, 15, 32, 0.6);
+    color: var(--frost); font-size: 1.3rem; cursor: pointer;
+  }
+  .lightbox__nav:hover { border-color: var(--frost); }
+  .lightbox__nav--prev { left: clamp(0.5rem, 2vw, 1.5rem); }
+  .lightbox__nav--next { right: clamp(0.5rem, 2vw, 1.5rem); }
+  .lightbox__close {
+    position: absolute; top: 0.5rem; right: 0.75rem;
+    width: 44px; height: 44px; padding: 0;
+    border: 0; background: none; color: var(--silver);
+    font-size: 2rem; line-height: 1; cursor: pointer;
+  }
+  .lightbox__close:hover { color: var(--frost); }
+  .lightbox__count {
+    position: absolute; bottom: 0.75rem; left: 50%; transform: translateX(-50%); margin: 0;
+    font-family: var(--font-type); font-size: 0.75rem; color: var(--moon);
+  }
+    
   /* 9 · SHOWS ------------------------------------------------------------- */
   .shows-list { display: grid; gap: var(--s-7); }
   .show { display: grid; gap: 1.75rem; border-top: 1px solid var(--line-strong); padding-top: 1.5rem; }

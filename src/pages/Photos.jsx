@@ -2,11 +2,13 @@ import { useState } from 'react'
 import Layout from '../components/Layout.jsx'
 import Photo from '../components/Photo.jsx'
 import Text from '../components/Text.jsx'
+import Lightbox from '../components/Lightbox.jsx'
 import { DRAFT_MODE, photos, photoCategories, copy } from '../content.js'
 import { isFilled, photoAlt } from '../lib.js'
 
 export default function Photos() {
   const [filter, setFilter] = useState('all')
+  const [open, setOpen] = useState(null)
 
   const all = photos.filter((p) => isFilled(p.src) || DRAFT_MODE)
   const tags = photoCategories.filter((c) => all.some((p) => p.category === c.id))
@@ -25,6 +27,10 @@ export default function Photos() {
     }
     return { ...p, size }
   })
+
+  // Only real photos can be opened (not draft placeholders)
+  const viewable = tiles.filter((p) => isFilled(p.src))
+  const openPhoto = (p) => setOpen(viewable.findIndex((v) => v.id === p.id))
 
   return (
     <Layout page="photos">
@@ -61,7 +67,18 @@ export default function Photos() {
             <div className="pgrid">
               {tiles.map((p) => (
                 <figure key={p.id} className={`pgrid__item pgrid__item--${p.size}`}>
-                  <Photo src={p.src} alt={photoAlt(p)} />
+                  {isFilled(p.src) ? (
+                    <button
+                      type="button"
+                      className="pgrid__open"
+                      aria-label={`View photo: ${photoAlt(p)}`}
+                      onClick={() => openPhoto(p)}
+                    >
+                      <Photo src={p.src} alt={photoAlt(p)} />
+                    </button>
+                  ) : (
+                    <Photo src={p.src} alt={photoAlt(p)} />
+                  )}
                   {isFilled(p.caption) && <figcaption>{p.caption}</figcaption>}
                 </figure>
               ))}
@@ -69,6 +86,10 @@ export default function Photos() {
           </>
         )}
       </div>
+
+      {open !== null && viewable[open] && (
+        <Lightbox items={viewable} index={open} onChange={setOpen} onClose={() => setOpen(null)} />
+      )}
     </Layout>
   )
 }
