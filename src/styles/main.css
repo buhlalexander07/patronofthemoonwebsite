@@ -159,7 +159,7 @@
   .photo--cold img { filter: grayscale(0.55) contrast(1.06) brightness(0.9); }
   .photo--cold::before {
     content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-    background: var(--deep); mix-blend-mode: color; opacity: 0.45;
+    background: var(--deep); mix-blend-mode: color; opacity: 0.25;
   }
   .photo--haze img { filter: grayscale(0.3) blur(0.6px) brightness(1.05) contrast(0.9); }
   .photo--haze::before {
