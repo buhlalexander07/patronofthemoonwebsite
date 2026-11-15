@@ -156,10 +156,10 @@
     background-image: var(--grain); opacity: 0.12; mix-blend-mode: overlay;
   }
   .photo--natural img { filter: saturate(0.85) contrast(1.02); }
-  .photo--cold img { filter: grayscale(0.55) contrast(1.06) brightness(0.9); }
+  .photo--cold img { filter: grayscale(0.2) contrast(1.05); }
   .photo--cold::before {
     content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-    background: var(--deep); mix-blend-mode: color; opacity: 0.25;
+    background: #1a2f66; mix-blend-mode: color; opacity: 0.2;
   }
   .photo--haze img { filter: grayscale(0.3) blur(0.6px) brightness(1.05) contrast(0.9); }
   .photo--haze::before {
