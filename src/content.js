@@ -29,7 +29,7 @@ export const site = {
 export const socials = [
   { label: 'Instagram', url: 'https://www.instagram.com/patronofthemoonband?fbclid=IwY2xjawVmHPFleHRuA2FlbQIxMABwZG9mAWJyaWQRMVI1ZGxpN2huYUdoZW9BVE9zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfOfotlAm1HjU_KCOR5zCtlWlLzXsq_3ocDzN5CUMgaqkTZkY8kdDFHBIvwVw_aem_uSEcyNlwt1QMeUPyh8HOXw' },
   { label: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61596728814249' },
-  { label: 'TikTok', url: '[ADD TIKTOK URL]' },
+  { label: 'TikTok', url: 'https://www.tiktok.com/@patronofthemoon' },
   { label: 'YouTube', url: ' https://www.youtube.com/@PatronoftheMoon' },
   { label: 'Spotify', url: '[ADD SPOTIFY URL — WHEN AVAILABLE]' },
   { label: 'Bandcamp', url: 'https://patronofthemoon.bandcamp.com' }
