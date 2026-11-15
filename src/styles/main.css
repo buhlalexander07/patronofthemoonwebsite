@@ -168,6 +168,11 @@
     mix-blend-mode: screen;
   }
   .photo--mono img { filter: grayscale(1) contrast(1.15) brightness(0.85); }
+  .photo--night img { filter: saturate(1.1) contrast(1.08) brightness(0.95); }
+  .photo--night::before {
+    content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: var(--deep); mix-blend-mode: soft-light; opacity: 0.6;
+  }
   .photo--empty::before { display: none; }
   
   .photo__empty {
