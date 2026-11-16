@@ -376,6 +376,16 @@
   .signpost__note { font-family: var(--font-type); font-size: 0.8rem; letter-spacing: 0.06em; color: var(--silver); }
   .signpost:hover { color: #fff; }
   .signpost:hover .photo { transform: scale(1.03); }
+
+  /* Phones: show the full hero photo uncropped, title underneath */
+  @media (max-width: 767px) {
+    .masthead--overlay { position: relative; }
+    .hero { min-height: 0; }
+    .hero__visual { position: relative; inset: auto; }
+    .hero__photo { position: relative; inset: auto; height: auto; }
+    .hero__photo img { height: auto; }
+    .hero__inner { margin-top: -2.5rem; padding-top: 0; }
+  }
   
   /* 7 · ABOUT ------------------------------------------------------------- */
   .bio { display: grid; gap: var(--s-5); margin-bottom: var(--s-7); }
