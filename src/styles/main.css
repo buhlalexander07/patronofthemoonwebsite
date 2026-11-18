@@ -549,6 +549,42 @@
   .past__list { list-style: none; margin: 0; padding: 0; }
   .past__list li { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
   .past__list time { font-family: var(--font-type); font-size: 0.8rem; color: var(--moon); }
+
+  /* MUSIC ------------------------------------------------------------------ */
+  .release { display: grid; gap: var(--s-5); }
+  .release__cover .photo { box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.75); }
+  .release__meta {
+    margin: 0 0 0.5rem; font-family: var(--font-type); font-size: 0.8rem;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--moon);
+  }
+  .release__title {
+    margin-bottom: 1.25rem; font-family: var(--font-cond); font-weight: 600; text-transform: uppercase;
+    font-size: clamp(2.4rem, 7vw, 4.5rem); line-height: 0.9;
+  }
+  .release__about {
+    max-width: 52ch; font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2vw, 1.3rem); line-height: 1.55; color: var(--frost);
+  }
+  .release__player { display: block; width: 100%; height: 352px; margin: 1.5rem 0; border: 0; border-radius: 12px; }
+  .release__links { list-style: none; margin: 0 0 var(--s-5); padding: 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .release__section { margin-top: var(--s-5); }
+  .tracks { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .tracks__row {
+    display: grid; grid-template-columns: 2.5rem 1fr auto; gap: 1rem; align-items: baseline;
+    padding: 0.7rem 0; border-bottom: 1px solid var(--line);
+  }
+  .tracks__num { font-family: var(--font-type); font-size: 0.75rem; color: var(--moon); }
+  .tracks__title { color: var(--frost); }
+  .tracks__len { font-family: var(--font-type); font-size: 0.8rem; color: var(--moon); }
+  .credits { margin: 0; border-top: 1px solid var(--line); }
+  .credits__row { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
+  .credits__row dt { padding-top: 0.2em; font-family: var(--font-type); font-size: 0.75rem; color: var(--moon); }
+  .credits__row dd { margin: 0; color: var(--frost); }
+  @media (min-width: 1024px) {
+    .release { grid-template-columns: repeat(12, 1fr); column-gap: 1.5rem; align-items: start; }
+    .release__cover { grid-column: 1 / 6; position: sticky; top: 2rem; }
+    .release__body { grid-column: 7 / 13; }
+  }
   
   /* 10 · CONTACT & 404 ---------------------------------------------------- */
   .contact { display: grid; gap: var(--s-6); }

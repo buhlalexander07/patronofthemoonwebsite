@@ -1,9 +1,11 @@
-import { DRAFT_MODE, site } from '../content.js'
-import { isFilled, url } from '../lib.js'
+import { DRAFT_MODE, site, release } from '../content.js'
+import { isFilled, isReleased, url } from '../lib.js'
 import { SocialLinks, EmailLink } from './Links.jsx'
+
 
 const NAV = [
   { id: 'about', label: 'About', href: 'about/' },
+  { id: 'music', label: 'Music', href: 'music/' },
   { id: 'shows', label: 'Shows', href: 'shows/' },
   { id: 'photos', label: 'Photos', href: 'photos/' },
   { id: 'contact', label: 'Contact', href: 'contact/' },
@@ -30,7 +32,7 @@ export default function Layout({ page, children }) {
       </a>
         <nav aria-label="Main">
           <ul className="nav">
-            {NAV.map((item, i) => (
+            {NAV.filter((item) => item.id !== 'music' || isReleased(release) || DRAFT_MODE).map((item, i) => (
               <li key={item.id}>
                 {i > 0 && <span className="nav__sep" aria-hidden="true">/</span>}
                 <a href={url(item.href)} aria-current={page === item.id ? 'page' : undefined}>

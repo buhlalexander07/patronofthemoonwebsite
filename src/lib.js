@@ -51,3 +51,20 @@ export function splitShows(list) {
     past: visible.filter((s) => s._date && s._date < today).sort((a, b) => time(b) - time(a)),
   }
 }
+
+/** The release is live once it has a title and its date has arrived. */
+export function isReleased(r) {
+  if (!r || !isFilled(r.title)) return false
+  const d = parseDate(r.date)
+  if (!d) return true
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+  return d <= today
+}
+
+/** Turn a normal Spotify share link into its embed-player address. */
+export function spotifyEmbed(link) {
+  if (!isFilled(link)) return null
+  const m = /open\.spotify\.com\/(?:intl-[a-z-]+\/)?(album|track|playlist)\/([A-Za-z0-9]+)/.exec(link)
+  return m ? `https://open.spotify.com/embed/${m[1]}/${m[2]}?theme=0` : null
+}

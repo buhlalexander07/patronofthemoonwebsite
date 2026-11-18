@@ -12,7 +12,7 @@ const base = process.env.BASE_PATH || '/'
 
 const isPlaceholder = (v) => !v || /^\[.*\]$/.test(String(v).trim())
 const SITE_URL = isPlaceholder(site.url) ? '' : String(site.url).replace(/\/+$/, '')
-const PAGES = ['', 'about/', 'photos/', 'shows/', 'contact/']
+const PAGES = ['', 'about/', 'music/', 'photos/', 'shows/', 'contact/']
 
 // Fills absolute URLs into the HTML and writes sitemap.xml + robots.txt at build time.
 function siteFiles() {
@@ -51,6 +51,7 @@ export default defineConfig({
       input: {
         home: page('index.html'),
         about: page('about/index.html'),
+        music: page('music/index.html'),
         photos: page('photos/index.html'),
         shows: page('shows/index.html'),
         contact: page('contact/index.html'),

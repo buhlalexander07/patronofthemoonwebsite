@@ -43,6 +43,7 @@ export const copy = {
   showsLede: '',
   showsEmpty: 'No dates right now. Check back soon.',
   contactLabel: '',
+  musicEmpty: 'New music soon.',
 }
 
 /* ---------------------------------- HOME ---------------------------------- */
@@ -53,6 +54,7 @@ export const home = {
   // The three big links under the hero, in order. photo: any image path in /public.
   signposts: [
     { id: 'about', label: 'About', href: 'about/', photo: 'images/photos/band.JPG' },
+    { id: 'music', label: 'Music', href: 'music/', photo: 'images/photos/aesthetic-02.JPG' },
     { id: 'shows', label: 'Shows', href: 'shows/', photo: 'images/photos/aesthetic-01.JPG' },
     { id: 'photos', label: 'Photos', href: 'photos/', photo: 'images/photos/group-01.JPG' },
   ],
@@ -95,6 +97,39 @@ export const members = [
     photo: { src: 'images/members/member-04.JPG', alt: '' },
   },
 ]
+
+/* ---------------------------------- MUSIC --------------------------------- */
+// The EP. Everything here stays hidden until the release date below.
+export const release = {
+  title: '[ADD EP TITLE]',
+  date: '[ADD RELEASE DATE]',            // 'YYYY-MM-DD'. The Music page appears on this day.
+  type: 'EP',
+  cover: '[ADD COVER — images/music/ep-cover.jpg]',
+  coverAlt: '',
+  // A few sentences about the EP. One string per paragraph.
+  about: ['[ADD SHORT WRITE-UP]'],
+  // Paste the EP's normal Spotify link (Share → Copy link to album)
+  spotify: '[ADD SPOTIFY ALBUM LINK]',
+  // Streaming buttons. Unfilled ones are hidden.
+  links: [
+    { label: 'Spotify', url: '[ADD SPOTIFY LINK]' },
+    { label: 'Apple Music', url: '[ADD APPLE MUSIC LINK]' },
+    { label: 'Bandcamp', url: '[ADD BANDCAMP LINK]' },
+    { label: 'YouTube Music', url: '[ADD YOUTUBE MUSIC LINK]' },
+  ],
+  tracks: [
+    { title: '[ADD TRACK TITLE]', length: '[0:00]' },
+    { title: '[ADD TRACK TITLE]', length: '[0:00]' },
+    { title: '[ADD TRACK TITLE]', length: '[0:00]' },
+    { title: '[ADD TRACK TITLE]', length: '[0:00]' },
+  ],
+  credits: [
+    { role: 'Recorded by', name: '[ADD NAME]' },
+    { role: 'Mixed by', name: '[ADD NAME]' },
+    { role: 'Mastered by', name: '[ADD NAME]' },
+    { role: 'Artwork', name: '[ADD NAME]' },
+  ],
+}
 
 /* --------------------------------- PHOTOS --------------------------------- */
 // The tags shown at the top of the Photos page, in this order.

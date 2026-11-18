@@ -1,8 +1,8 @@
 import Layout from '../components/Layout.jsx'
 import Photo from '../components/Photo.jsx'
 import MoonField from '../components/MoonField.jsx'
-import { site, home, shows, copy } from '../content.js'
-import { isFilled, url, splitShows, dateParts } from '../lib.js'
+import { DRAFT_MODE, site, home, shows, copy, release } from '../content.js'
+import { isFilled, url, splitShows, dateParts, isReleased } from '../lib.js'
 
 export default function Home() {
   const hasHero = isFilled(home.heroImage.src)
@@ -37,7 +37,9 @@ export default function Home() {
       </section>
 
       <nav className="signposts" aria-label="Explore the site">
-        {home.signposts.map((s) => {
+        {home.signposts
+          .filter((s) => s.id !== 'music' || isReleased(release) || DRAFT_MODE)
+          .map((s) => {
           const note = s.id === 'shows' ? showsNote : null
           return (
             <a key={s.id} className="signpost" href={url(s.href)}>
