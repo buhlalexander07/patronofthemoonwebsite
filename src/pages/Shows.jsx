@@ -1,11 +1,20 @@
 import Layout from '../components/Layout.jsx'
 import ShowCard from '../components/ShowCard.jsx'
 import Text from '../components/Text.jsx'
-import { shows, copy } from '../content.js'
-import { isFilled, splitShows, dateParts } from '../lib.js'
+import YouTube from '../components/YouTube.jsx'
+import { shows, showsVideo, copy } from '../content.js'
+import { isFilled, splitShows, dateParts, parseDate, youtubeId } from '../lib.js'
 
 export default function Shows() {
   const { upcoming, past } = splitShows(shows)
+
+  const videoId = youtubeId(showsVideo?.youtube)
+  const vd = parseDate(showsVideo?.date)
+  const vp = vd ? dateParts(vd) : null
+  const videoWhere = [
+    isFilled(showsVideo?.venue) ? `Live at ${showsVideo.venue}` : null,
+    vp ? `${vp.month} ${vp.year}` : null,
+  ].filter(Boolean).join(' · ')
 
   return (
     <Layout page="shows">
@@ -15,6 +24,19 @@ export default function Shows() {
           <h1 className="page-title distress">Shows</h1>
           <Text as="p" className="page-lede" value={copy.showsLede} />
         </header>
+
+        {videoId && (
+          <figure className="shows-video">
+            <YouTube
+              id={videoId}
+              title={isFilled(showsVideo.title) ? `${showsVideo.title}, live` : 'Live video'}
+            />
+            <figcaption className="live__caption">
+              <Text className="live__title" value={showsVideo.title} />
+              {videoWhere && <span className="live__where">{videoWhere}</span>}
+            </figcaption>
+          </figure>
+        )}
 
         {upcoming.length > 0 ? (
           <div className="shows-list">

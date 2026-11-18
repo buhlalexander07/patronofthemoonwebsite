@@ -62,7 +62,7 @@ export const home = {
 /* ---------------------------------- ABOUT --------------------------------- */
 export const about = {
   bio: [
-    'Patron of the Moon is an indie alternative band based in Minneapolis, formed by a group of University of Minnesota College of Science and Engineering students. Blending dreamy textures, jangly guitars, and bittersweet melodies, their sound draws from the likes of Hers, The Strokes, and The Backseat Lovers. Their music explores relationships, personal struggles, and the experience of growing up in a world that seems to move faster every day. Often drawing on winter imagery and themes of nostalgia, Patron of the Moon captures the feeling of searching for pieces of the past while trying to make sense of the present. With an intimate and atmospheric approach to both recording and performing, their music is made for cold walks, long nights, and moments when everything feels a little more distant.',
+    'Patron of the Moon is an indie alternative band based in Minneapolis, formed by a group of University of Minnesota College of Science and Engineering students. Their sound blends dreamy textures, jangly guitars, and bittersweet melodies, similar to the likes of Her\'s, The Strokes, and The Backseat Lovers. Their music explores relationships, personal struggles, and the experience of growing up in a world that seems to move faster every day. Often drawing on winter imagery and themes of nostalgia, Patron of the Moon captures the feeling of searching for pieces of the past while trying to make sense of the present.',
     '[PLACEHOLDER: FINAL BAND BIOGRAPHY — paragraph two (optional)]',
   ],
   // Band photo beside the bio. ratio e.g. '4/5', '3/4'; treatment: natural | cold | haze | mono
@@ -168,6 +168,14 @@ export const photos = [
 ]
 
 /* ---------------------------------- SHOWS --------------------------------- */
+// Live video at the top of the Shows page when there are no upcoming dates.
+export const showsVideo = {
+  title: 'Song Name',
+  venue: 'Venue Name',
+  date: '2026-11-01',
+  youtube: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+}
+
 // Copy a block to add a show. Past dates move to "Past" automatically.
 // Unfilled fields are hidden on the live site.
 export const shows = [

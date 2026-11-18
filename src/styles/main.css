@@ -550,6 +550,26 @@
   .past__list li { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px solid var(--line); font-size: 0.95rem; }
   .past__list time { font-family: var(--font-type); font-size: 0.8rem; color: var(--moon); }
 
+  .shows-video { max-width: 900px; margin: 0 0 var(--s-6); }
+
+  .yt { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--black); }
+  .yt iframe, .yt__poster { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .yt__poster { padding: 0; background: none; cursor: pointer; }
+  .yt__poster img { width: 100%; height: 100%; object-fit: cover; }
+  .yt__play {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: 64px; height: 64px; border-radius: 50%;
+    background: rgba(8, 15, 32, 0.75); border: 1px solid var(--line-strong);
+  }
+  .yt__play::after {
+    content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-35%, -50%);
+    border-style: solid; border-width: 11px 0 11px 18px;
+    border-color: transparent transparent transparent var(--frost);
+  }
+  .live__caption { display: grid; gap: 0.15rem; margin-top: 0.75rem; }
+  .live__title { font-family: var(--font-cond); font-size: 1.3rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--frost); }
+  .live__where { font-family: var(--font-type); font-size: 0.75rem; color: var(--moon); }
+
   /* MUSIC ------------------------------------------------------------------ */
   .release { display: grid; gap: var(--s-5); }
   .release__cover .photo { box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.75); }
@@ -585,6 +605,8 @@
     .release__cover { grid-column: 1 / 6; position: sticky; top: 2rem; }
     .release__body { grid-column: 7 / 13; }
   }
+
+  
   
   /* 10 · CONTACT & 404 ---------------------------------------------------- */
   .contact { display: grid; gap: var(--s-6); }

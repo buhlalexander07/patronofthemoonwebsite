@@ -68,3 +68,10 @@ export function spotifyEmbed(link) {
   const m = /open\.spotify\.com\/(?:intl-[a-z-]+\/)?(album|track|playlist)\/([A-Za-z0-9]+)/.exec(link)
   return m ? `https://open.spotify.com/embed/${m[1]}/${m[2]}?theme=0` : null
 }
+
+/** Pull the video id out of any YouTube link (watch, youtu.be, shorts, live). */
+export function youtubeId(link) {
+  if (!isFilled(link)) return null
+  const m = /(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/|\/live\/)([A-Za-z0-9_-]{11})/.exec(link)
+  return m ? m[1] : null
+}
