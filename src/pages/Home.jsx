@@ -43,7 +43,7 @@ export default function Home() {
             <a key={s.id} className="signpost" href={url(s.href)}>
               <Photo src={s.photo} alt="" className="signpost__photo" />
               <span className="signpost__text">
-                <span className="signpost__label distress">{s.label}</span>
+                <span className="signpost__label">{s.label}</span>
                 {note && <span className="signpost__note">{note}</span>}
               </span>
             </a>

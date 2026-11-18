@@ -55,8 +55,7 @@
     inset: 0;
     pointer-events: none;
     background-image: var(--grain);
-    opacity: 0.05;
-    mix-blend-mode: screen;
+    opacity: 0.03;
     z-index: 100;
   }
   
@@ -333,7 +332,6 @@
     grid-column: 1 / -1; margin-top: 0.75rem;
     font-family: var(--font-cond); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.8rem;
   }
-  .next-card:hover .next-card__go { color: var(--frost); }
   @media (min-width: 1024px) {
     .next-show { display: grid; grid-template-columns: repeat(12, 1fr); }
     .next-show .kicker { grid-column: 1 / 3; padding-top: 1.5rem; }
@@ -358,6 +356,7 @@
     position: relative; display: block; overflow: hidden;
     height: clamp(240px, 42vw, 520px);
     color: var(--frost); text-decoration: none;
+    contain: paint;
   }
   .signpost .photo { position: absolute; inset: 0; height: 100%; transition: transform 1.2s ease; }
   .signpost::after {
@@ -374,8 +373,6 @@
     text-shadow: 0 0 30px rgba(113, 132, 159, 0.3);
   }
   .signpost__note { font-family: var(--font-type); font-size: 0.8rem; letter-spacing: 0.06em; color: var(--silver); }
-  .signpost:hover { color: #fff; }
-  .signpost:hover .photo { transform: scale(1.03); }
 
   /* Phones: show the full hero photo uncropped, title underneath */
   @media (max-width: 767px) {
