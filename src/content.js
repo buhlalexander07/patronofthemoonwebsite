@@ -62,7 +62,7 @@ export const home = {
 /* ---------------------------------- ABOUT --------------------------------- */
 export const about = {
   bio: [
-    'Patron of the Moon is an indie alternative band based in Minneapolis, formed by a group of University of Minnesota College of Science and Engineering students. Their sound blends dreamy textures, jangly guitars, and bittersweet melodies, similar to the likes of Her\'s, The Strokes, and The Backseat Lovers. Their music explores relationships, personal struggles, and the experience of growing up in a world that seems to move faster every day. Often drawing on winter imagery and themes of nostalgia, Patron of the Moon captures the feeling of searching for pieces of the past while trying to make sense of the present.',
+    'Patron of the Moon is an indie alternative band based in Minneapolis, formed by a group of U of M engineering school students who were supposed to be doing homework. They make hazy, jangly guitar music that falls somewhere between Her’s, The Strokes, and The Backseat Lovers. The songs are about being young now, and feeling like you showed up after the party ended. It’s music for missing something you can’t name while the present refuses to slow down.',
     '[PLACEHOLDER: FINAL BAND BIOGRAPHY — paragraph two (optional)]',
   ],
   // Band photo beside the bio. ratio e.g. '4/5', '3/4'; treatment: natural | cold | haze | mono
