@@ -170,9 +170,9 @@ export const photos = [
 /* ---------------------------------- SHOWS --------------------------------- */
 // Live video at the top of the Shows page when there are no upcoming dates.
 export const showsVideo = {
-  title: 'Song Name',
-  venue: 'Venue Name',
-  date: '2026-11-01',
+  title: 'Selene',
+  venue: 'Rehearsal at Huntington Bank Stadium',
+  date: '2026-11-22',
   youtube: 'https://youtu.be/SWtOB0dqF9Y',
 }
 
