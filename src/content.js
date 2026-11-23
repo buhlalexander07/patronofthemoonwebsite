@@ -171,7 +171,7 @@ export const photos = [
 // Live video at the top of the Shows page when there are no upcoming dates.
 export const showsVideo = {
   title: 'Selene',
-  venue: 'Rehearsal at Huntington Bank Stadium',
+  venue: 'Huntington Bank Stadium (Rehearsal)',
   date: '2026-11-22',
   youtube: 'https://youtu.be/SWtOB0dqF9Y',
 }
