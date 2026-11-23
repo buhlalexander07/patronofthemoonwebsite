@@ -62,7 +62,7 @@ export const home = {
 /* ---------------------------------- ABOUT --------------------------------- */
 export const about = {
   bio: [
-    'Patron of the Moon is an indie alternative band based in Minneapolis, formed by a group of U of M engineering school students who were supposed to be doing homework. They make hazy, jangly guitar music that falls somewhere between Her’s, The Strokes, and The Backseat Lovers. The songs are about being young now, and feeling like you showed up after the party ended. It’s music for missing something you can’t name while the present refuses to slow down.',
+    'Patron of the Moon is an indie alternative band based in Minneapolis, formed by a group of U of M engineering school students who were supposed to be doing homework. They make hazy, nostalgic guitar music that falls somewhere between Her\'s, The Strokes, and The Backseat Lovers. The songs are about being young now, and feeling like you showed up after the party ended. It’s music for missing something you can’t name while the present refuses to slow down.',
     '[PLACEHOLDER: FINAL BAND BIOGRAPHY — paragraph two (optional)]',
   ],
   // Band photo beside the bio. ratio e.g. '4/5', '3/4'; treatment: natural | cold | haze | mono
@@ -173,7 +173,7 @@ export const showsVideo = {
   title: 'Song Name',
   venue: 'Venue Name',
   date: '2026-11-01',
-  youtube: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  youtube: 'https://youtu.be/SWtOB0dqF9Y',
 }
 
 // Copy a block to add a show. Past dates move to "Past" automatically.
