@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 /** Patron of the Moon monogram: white disc, blue P · moon · T M, set in Cinzel. */
-const BLUE = '#080F20'
+const BLUE = '#06061E'
 const DISC = '#E2E5E9'
 const FONT = '700 100px Cinzel'
 

@@ -12,7 +12,7 @@ export default function Shows() {
   const vd = parseDate(showsVideo?.date)
   const vp = vd ? dateParts(vd) : null
   const videoWhere = [
-    isFilled(showsVideo?.venue) ? `Live at ${showsVideo.venue}` : null,
+    isFilled(showsVideo?.venue) ? `Rehearsal at ${showsVideo.venue}` : null,
     vp ? `${vp.month} ${vp.year}` : null,
   ].filter(Boolean).join(' · ')
 

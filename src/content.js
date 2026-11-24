@@ -27,7 +27,7 @@ export const site = {
 
 // Social links. Only filled-in links appear on the live site.
 export const socials = [
-  { label: 'Instagram', url: 'https://www.instagram.com/patronofthemoonband?fbclid=IwY2xjawVmHPFleHRuA2FlbQIxMABwZG9mAWJyaWQRMVI1ZGxpN2huYUdoZW9BVE9zcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfOfotlAm1HjU_KCOR5zCtlWlLzXsq_3ocDzN5CUMgaqkTZkY8kdDFHBIvwVw_aem_uSEcyNlwt1QMeUPyh8HOXw' },
+  { label: 'Instagram', url: 'https://www.instagram.com/patronofthemoonband' },
   { label: 'Facebook', url: 'https://www.facebook.com/profile.php?id=61596728814249' },
   { label: 'TikTok', url: 'https://www.tiktok.com/@patronofthemoon' },
   { label: 'YouTube', url: ' https://www.youtube.com/@PatronoftheMoon' },
@@ -55,8 +55,8 @@ export const home = {
   signposts: [
     { id: 'about', label: 'About', href: 'about/', photo: 'images/photos/band.JPG' },
     { id: 'music', label: 'Music', href: 'music/', photo: 'images/photos/aesthetic-02.JPG' },
-    { id: 'shows', label: 'Shows', href: 'shows/', photo: 'images/photos/aesthetic-01.JPG' },
-    { id: 'photos', label: 'Photos', href: 'photos/', photo: 'images/photos/group-01.JPG' },
+    { id: 'shows', label: 'Shows', href: 'shows/', photo: 'images/photos/rehearsal-01.JPG' },
+    { id: 'photos', label: 'Photos', href: 'photos/', photo: 'images/photos/aesthetic-01.JPG' },
   ],
 }
 /* ---------------------------------- ABOUT --------------------------------- */
@@ -146,6 +146,7 @@ export const photoCategories = [
 // so the order below puts group shots wide, portraits tall and aesthetic shots large.
 export const photos = [
   { id: 'group-01', category: 'portraits', src: 'images/photos/group-01.JPG', alt: '', caption: '' },
+  { id: 'rehearsal-01', category: 'rehearsal', src: 'images/photos/rehearsal-01.JPG', alt: '', caption: '' },
   { id: 'aesthetic-01', category: 'other', src: 'images/photos/aesthetic-01.JPG', alt: '', caption: '' },
   { id: 'portrait-01', category: 'portraits', src: 'images/photos/portrait-01.JPG', alt: '', caption: '' ,feature: false },
   { id: 'aesthetic-02', category: 'other', src: 'images/photos/aesthetic-02.JPG', alt: '', caption: '' },
@@ -161,7 +162,7 @@ export const photos = [
   { id: 'aesthetic-06', category: 'other', src: 'images/photos/aesthetic-06.JPG', alt: '', caption: '' },
 
   // Slots for upcoming photos (hidden on the live site until filled in)
-  { id: 'rehearsal-01', category: 'rehearsal', src: '[ADD PHOTO — images/photos/rehearsal-01.JPG]', alt: '', caption: '' },
+  
   { id: 'live-01', category: 'live', src: '[ADD PHOTO — images/photos/live-01.JPG]', alt: '', caption: '' },
   { id: 'rehearsal-02', category: 'rehearsal', src: '[ADD PHOTO — images/photos/rehearsal-02.JPG]', alt: '', caption: '' },
   { id: 'live-02', category: 'live', src: '[ADD PHOTO — images/photos/live-02.JPG]', alt: '', caption: '' },
@@ -171,7 +172,7 @@ export const photos = [
 // Live video at the top of the Shows page when there are no upcoming dates.
 export const showsVideo = {
   title: 'Selene',
-  venue: 'Huntington Bank Stadium (Rehearsal)',
+  venue: 'Huntington Bank Stadium',
   date: '2026-11-22',
   youtube: 'https://youtu.be/SWtOB0dqF9Y',
 }

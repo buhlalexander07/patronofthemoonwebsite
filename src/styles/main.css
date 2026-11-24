@@ -7,13 +7,13 @@
 
 /* 1 · TOKENS ------------------------------------------------------------- */
 :root {
-    --navy: #080F20;
-    --deep: #101D38;
+    --navy: #06061E;
+    --deep: #0a0a68;
     --black: #08090D;
-    --moon: #71849F;
-    --silver: #B8C1CD;
-    --frost: #E2E5E9;
-    --line: rgba(184, 193, 205, 0.16);
+    --moon: #597bab;
+    --silver: #97adca;
+    --frost: #c4d1e3;
+    --line: rgba(125, 157, 198, 0.16);
     --line-strong: rgba(184, 193, 205, 0.36);
   
     --font-display: 'IM Fell English', 'Times New Roman', serif;   /* worn letterpress serif */
@@ -158,7 +158,7 @@
   .photo--cold img { filter: grayscale(0.2) contrast(1.05); }
   .photo--cold::before {
     content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-    background: #1a2f66; mix-blend-mode: color; opacity: 0.2;
+    background: #224ebd; mix-blend-mode: color; opacity: 0.2;
   }
   .photo--haze img { filter: grayscale(0.3) blur(0.6px) brightness(1.05) contrast(0.9); }
   .photo--haze::before {
@@ -171,6 +171,17 @@
   .photo--night::before {
     content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
     background: var(--deep); mix-blend-mode: soft-light; opacity: 0.6;
+  }
+  .photo--cobalt img { filter: grayscale(1) contrast(1.15) brightness(0.95); }
+  .photo--cobalt::before {
+    content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: #2626FF; mix-blend-mode: color; opacity: 0.9;
+  }
+
+  .photo--indigo img { filter: grayscale(0.2) contrast(1.1) brightness(0.97); }
+  .photo--indigo::before {
+    content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: #2B33E6; mix-blend-mode: color; opacity: 0.2;
   }
   .photo--empty::before { display: none; }
   
@@ -259,7 +270,7 @@
     content: ''; position: absolute; inset: 0; z-index: 3;
     background:
       linear-gradient(to bottom, rgba(8, 15, 32, 0.75) 0%, rgba(8, 15, 32, 0) 22%),
-      linear-gradient(to top, var(--navy) 0%, rgba(8, 15, 32, 0.55) 32%, rgba(8, 15, 32, 0) 65%);
+      linear-gradient(to top, var(--navy) 0%, rgba(8, 15, 32, 0.85) 30%, rgba(8, 15, 32, 0.4) 55%, rgba(8, 15, 32, 0) 75%);
   }
   .hero__inner { position: relative; z-index: 4; padding: 0 var(--gutter) clamp(2.5rem, 8vh, 5rem); }
   .hero__logo { width: clamp(64px, 12vw, 120px); height: auto; margin-bottom: 1.5rem; opacity: 0.9; }
@@ -374,6 +385,12 @@
   }
   .signpost__note { font-family: var(--font-type); font-size: 0.8rem; letter-spacing: 0.06em; color: var(--silver); }
 
+  /* Blue wash on the home page tabs only */
+  .signpost .photo img { filter: grayscale(1) contrast(1.1) brightness(0.97); }
+  .signpost .photo:not(.photo--empty)::before {
+    content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: #2B33E6; mix-blend-mode: color; opacity: 0.3;
+  }
   /* Phones: show the full hero photo uncropped, title underneath */
   @media (max-width: 767px) {
     .masthead--overlay { position: relative; }

@@ -11,13 +11,13 @@ const STARS = [
         <defs>
           <linearGradient id="mf-sky" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="#08090D" />
-            <stop offset=".55" stopColor="#080F20" />
-            <stop offset="1" stopColor="#101D38" />
+            <stop offset=".55" stopColor="#06061E" />
+            <stop offset="1" stopColor="#0E0E4A" />
           </linearGradient>
           <radialGradient id="mf-halo">
             <stop offset="0" stopColor="#B8C1CD" stopOpacity=".32" />
             <stop offset=".35" stopColor="#71849F" stopOpacity=".12" />
-            <stop offset="1" stopColor="#080F20" stopOpacity="0" />
+            <stop offset="1" stopColor="#06061E" stopOpacity="0" />
           </radialGradient>
           <filter id="mf-soft"><feGaussianBlur stdDeviation="1.5" /></filter>
           <filter id="mf-grain" x="0" y="0" width="100%" height="100%">
@@ -37,7 +37,7 @@ const STARS = [
           <circle cx="712" cy="226" r="6" fill="#B8C1CD" opacity=".4" />
         </g>
   
-        <path d="M0 585 C160 545 300 575 440 560 S720 505 880 545 S1110 590 1200 560 L1200 800 L0 800 Z" fill="#101D38" />
+        <path d="M0 585 C160 545 300 575 440 560 S720 505 880 545 S1110 590 1200 560 L1200 800 L0 800 Z" fill="#0E0E4A" />
         <path d="M0 585 C160 545 300 575 440 560 S720 505 880 545 S1110 590 1200 560" fill="none" stroke="#B8C1CD" strokeOpacity=".22" strokeWidth="1.2" />
         <g fill="#08090D" opacity=".9">
           {PINES.map(([x, y, h], i) => (
