@@ -3,7 +3,7 @@ import { DRAFT_MODE } from '../content.js'
 import { isFilled, url } from '../lib.js'
 
 // One look for every photo on the site: 'natural' | 'cold' | 'haze' | 'mono'
-export const SITE_TREATMENT = 'cold'
+export const SITE_TREATMENT = 'indigo'
 
 /**
  * A photograph with the site's film treatment.
