@@ -37,7 +37,7 @@ export const socials = [
 
 // Small bits of interface copy. Edit freely or set to '' to remove.
 export const copy = {
-  heroWords: '',
+  heroWords: '44.977° N · 93.265° W · MPLS',
   photosLede: '',
   photosEmpty: 'Photographs are on their way.',
   showsLede: '',

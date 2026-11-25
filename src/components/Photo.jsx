@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { DRAFT_MODE } from '../content.js'
 import { isFilled, url } from '../lib.js'
 
-// One look for every photo on the site: 'natural' | 'cold' | 'haze' | 'mono'
-export const SITE_TREATMENT = 'indigo'
+// One look for every photo on the site
+export const SITE_TREATMENT = 'crt'
 
 /**
- * A photograph with the site's film treatment.
+ * A photograph with the site's color treatment.
  * Missing or broken images become a quiet frame (or a labelled placeholder in draft mode).
  */
 export default function Photo({ src, alt = '', ratio, keepColor = false, className = '', priority = false, label }) {

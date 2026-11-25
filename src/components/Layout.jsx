@@ -22,6 +22,13 @@ export default function Layout({ page, children }) {
           <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" />
           <feDisplacementMap in="SourceGraphic" scale="3" />
         </filter>
+        <filter id="pom-split" colorInterpolationFilters="sRGB">
+          <feComponentTransfer>
+            <feFuncR type="table" tableValues="0.02 0.24 0.62 1" />
+            <feFuncG type="table" tableValues="0.03 0.27 0.6 0.95" />
+            <feFuncB type="table" tableValues="0.18 0.46 0.68 0.86" />
+          </feComponentTransfer>
+        </filter>
       </svg>
 
       <header className={`masthead${page === 'home' ? ' masthead--overlay' : ''}`}>
