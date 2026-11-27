@@ -53,7 +53,7 @@ export const home = {
   heroImage: { src: 'images/hero/hero.JPG', alt: '' },
   // The three big links under the hero, in order. photo: any image path in /public.
   signposts: [
-    { id: 'about', label: 'About', href: 'about/', photo: 'images/photos/band.JPG' },
+    { id: 'about', label: 'About', href: 'about/', photo: 'images/photos/group-01.JPG' },
     { id: 'music', label: 'Music', href: 'music/', photo: 'images/photos/aesthetic-02.JPG' },
     { id: 'shows', label: 'Shows', href: 'shows/', photo: 'images/photos/rehearsal-01.JPG' },
     { id: 'photos', label: 'Photos', href: 'photos/', photo: 'images/photos/aesthetic-01.JPG' },
@@ -150,21 +150,22 @@ export const photos = [
   { id: 'aesthetic-01', category: 'other', src: 'images/photos/aesthetic-01.JPG', alt: '', caption: '' },
   { id: 'portrait-01', category: 'portraits', src: 'images/photos/portrait-01.JPG', alt: '', caption: '' ,feature: false },
   { id: 'aesthetic-02', category: 'other', src: 'images/photos/aesthetic-02.JPG', alt: '', caption: '' },
+  { id: 'rehearsal-02', category: 'rehearsal', src: 'images/photos/rehearsal-02.JPG', alt: '', caption: '' },
   { id: 'group-02', category: 'portraits', src: 'images/photos/group-02.JPG', alt: '', caption: '' },
   { id: 'portrait-02', category: 'portraits', src: 'images/photos/portrait-02.JPG', alt: '', caption: '' ,feature: false },
+  { id: 'rehearsal-03', category: 'rehearsal', src: 'images/photos/rehearsal-03.JPG', alt: '', caption: '' },
   { id: 'aesthetic-03', category: 'other', src: 'images/photos/aesthetic-03.JPG', alt: '', caption: '' },
   { id: 'portrait-03', category: 'portraits', src: 'images/photos/portrait-03.JPG', alt: '', caption: '' ,feature: false },
   { id: 'aesthetic-04', category: 'other', src: 'images/photos/aesthetic-04.JPG', alt: '', caption: '' },
-  { id: 'group-03', category: 'portraits', src: 'images/photos/group-03.JPG', alt: '', caption: '' },
-  { id: 'portrait-04', category: 'portraits', src: 'images/photos/portrait-04.JPG', alt: '', caption: '' ,feature: false },
-  { id: 'aesthetic-05', category: 'other', src: 'images/photos/aesthetic-05.JPG', alt: '', caption: '' },
   { id: 'group-04', category: 'portraits', src: 'images/photos/group-04.JPG', alt: '', caption: '' },
+  { id: 'portrait-04', category: 'portraits', src: 'images/photos/portrait-04.JPG', alt: '', caption: '' ,feature: false },
+  { id: 'group-03', category: 'portraits', src: 'images/photos/group-03.JPG', alt: '', caption: '' },
+  { id: 'aesthetic-05', category: 'other', src: 'images/photos/aesthetic-05.JPG', alt: '', caption: '' },
   { id: 'aesthetic-06', category: 'other', src: 'images/photos/aesthetic-06.JPG', alt: '', caption: '' },
 
   // Slots for upcoming photos (hidden on the live site until filled in)
   
   { id: 'live-01', category: 'live', src: '[ADD PHOTO — images/photos/live-01.JPG]', alt: '', caption: '' },
-  { id: 'rehearsal-02', category: 'rehearsal', src: '[ADD PHOTO — images/photos/rehearsal-02.JPG]', alt: '', caption: '' },
   { id: 'live-02', category: 'live', src: '[ADD PHOTO — images/photos/live-02.JPG]', alt: '', caption: '' },
 ]
 

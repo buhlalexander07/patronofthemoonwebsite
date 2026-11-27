@@ -18,7 +18,6 @@ export default function Photos() {
   // feature: false passes its spot on to the next photo that can take it.
   let pending = null
   const tiles = shown.map((p, i) => {
-    if (i % 8 === 0) pending = 'wide'
     if (i % 8 === 5) pending = 'large'
     let size = 'standard'
     if (pending && p.feature !== false) {
